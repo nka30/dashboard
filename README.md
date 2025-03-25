@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Blogging Platform
 
-## Getting Started
+## Description
 
-First, run the development server:
+This project is a blogging platform where users can create and view blog posts. The platform interacts with a mock API (using JSONPlaceholder) to fetch, create, and display posts. It uses React, Redux Toolkit, and Material-UI for the user interface and state management.
+
+## Live Demo
+
+## Technologies Used
+
+- **Frontend**: React, Next.js, Material-UI
+- **State Management**: Redux Toolkit (with Redux Query for API interactions)
+- **API**: JSONPlaceholder (for mock data)
+- **Version Control**: Git, GitHub
+- **Deployment**: Vercel
+
+## Installation
+
+### Prerequisites
+
+Ensure you have **Node.js** and **npm** installed:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+node -v
+npm -v
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Steps to Run the Project Locally
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+    ```bash
+    git clone https://github.com/nka30/dashboard.git
+    ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+2. Navigate to the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    cd dashboard
+    ```
 
-## Learn More
+3. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+4. Run the application locally:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+The app will be available at <http://localhost:3000>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Important Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- The API for post creation is based on JSONPlaceholder, a mock API for testing and prototyping.
+
+- The app includes basic error handling to ensure users are notified if a post creation fails.
+
+- The project is designed to be responsive, ensuring a smooth experience on both desktop and mobile devices.
+
+## File explanations
+
+- **App.tsx** contains the navbar which allows us to switch between posts and creating a new post.
+- **Index.tsx** displays a list of posts and allows the user to click a post and expand it in modal view.
+- **New.tsx** allows the user to submit a new post.
+- **store/api.ts** sets up the Redux Toolkit API slice for managing the data and interactions with the mock API.
+- **store/index.ts** configures the Redux store.
+
+## Challenges faced
+
+- Configuring the test file correctly.
+- SSR rendering.
