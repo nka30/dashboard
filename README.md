@@ -6,6 +6,8 @@ This project is a blogging platform where users can create and view blog posts. 
 
 ## Live Demo
 
+<https://dashboard-beta-rouge-55.vercel.app/>
+
 ## Technologies Used
 
 - **Frontend**: React, Next.js, Material-UI
