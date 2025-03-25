@@ -1,8 +1,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import NewPost from '../pages/new'; // Ensure you are importing the correct component
+import NewPost from './new'; // Ensure you are importing the correct component
 import '@testing-library/jest-dom'; // Import the jest-dom library for custom matchers
 
-// Mock the useCreatePostMutation hook to simulate an error
 jest.mock('../store/api', () => ({
   ...jest.requireActual('../store/api'),
   useCreatePostMutation: () => [
